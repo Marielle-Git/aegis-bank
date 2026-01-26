@@ -1,21 +1,15 @@
-/* barre de naavigation */
+/*----------------------------------------------------------------------*/
+/* ------------------------------ HEADER ------------------------------ */
+
+/* 
+Positionnements du burger menu et des boutons "se connecter" et "s'inscrire" 
+*/
 
 
-.header {
+.navbar {
     display: flex;
     justify-content: space-between;
 }
-
-/* Titre et sous titre */
-
-.hero {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin-top: 6.25rem;
-}
-
-/* SECTION S'inscrire / se connecter */
 
 .navbar__actions {
     display: flex;
@@ -23,19 +17,9 @@
     gap: 0.25rem;
 }
 
-/* SECTION TELECHARGER */
-
-
-
-.hero__cta {
-    display: flex;
-    justify-content: center;
-    margin-top: 6rem;
-    border: none;
-}
-
-
-/* BOUTONS S'inscrire / se connecter */
+/* 
+Style des boutons "se connecter" et "s'inscrire" 
+*/
 
 .navbar__button--register,
 .navbar__button--login {
@@ -47,53 +31,24 @@
     margin-top: 0.4rem;
 }
 
-/* BOUTONS TELECHARGER */
 
+/*----------------------------------------------------------------------*/
+/* ------------------------------- MAIN ------------------------------- */
 
-.hero__button {
-    background-color: #8A65B5;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
+/* 
+Positionnement de la class "hero"
+*/
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    font-size: 1.25rem;
-    border-radius: 1rem;
+    margin-top: 6.25rem;
 }
 
-
-
-.download:hover {
-    background-color: #6D4998;
-}
-
-.promo-card {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.logo {
-    display: flex;
-    width: 2.5rem;
-}
-
-/* Icones réseaux sociaux */
-
-.social__icon {
-    display: flex;
-    width: 1.5rem;
-    margin-top: 4rem;
-}
-
-/* SECTION réseaux sociaux*/
-
-.social {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    padding-left: 8rem;
-    padding-right: 8rem;
-}
+/* 
+Positionnement et style "titre" et "sous-titre"
+*/
 
 .hero__title {
     font-size: 2rem;
@@ -111,6 +66,74 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* 
+Positionnement bouton CTA "Télécharger l'app"
+*/
+
+.hero__cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    border: none;
+}
+
+/* 
+Style bouton CTA "télécharger l'app"
+*/
+
+.hero__button:hover {
+    background-color: #6D4998;
+}
+
+.hero__button {
+    background-color: #8A65B5;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+}
+
+/* 
+positionnement card promotionnelle
+*/
+
+.promo-card {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* 
+Positionnement logos réseaux sociaux
+*/
+
+.social {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+/* 
+Style logos réseaux sociaux
+*/
+
+.social__icon {
+    width: 1.5rem;
+    margin-top: 4rem;
+}
+
+
+/*----------------------------------------------------------------------*/
+/* ------------------------------ FOOTER ------------------------------ */
+
+/* 
+Positionnement du footer
+*/
+
 .footer__nav {
     display: flex;
     justify-content: center;
@@ -118,6 +141,10 @@
     gap: 0.5rem;
     margin-top: 4rem;
 }
+
+/* 
+Style du footer : liens légaux
+*/
 
 .footer__link {
     font-family: Arial, Helvetica, sans-serif;
