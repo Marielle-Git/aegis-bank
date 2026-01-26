@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
+
 <body>
 
     <!-------------------------------------------------------
@@ -17,79 +19,101 @@
     width - largeur
     -------------------------------------------------------->
 
-    <header class="navbar">
+    <header class="header">
 
-        <div class="burger">
+        <nav class="navbar">
 
-            <svg width="30" height="30" viewBox="0 0 30 30">
-                <line x1="5" y1="5" x2="25" y2="5" stroke="#333" stroke-width="1" />
-                <line x1="5" y1="12" x2="25" y2="12" stroke="#333" stroke-width="1" />
-                <line x1="5" y1="19" x2="25" y2="19" stroke="#333" stroke-width="1" />
-            </svg>
+            <div class="navbar__burger">
 
-        </div>
+                <svg width="30" height="30" viewBox="0 0 30 30">
+                    <line x1="5" y1="5" x2="25" y2="5" stroke="#333" stroke-width="1" />
+                    <line x1="5" y1="12" x2="25" y2="12" stroke="#333" stroke-width="1" />
+                    <line x1="5" y1="19" x2="25" y2="19" stroke="#333" stroke-width="1" />
+                </svg>
 
-        <div class="connect">
+            </div>
 
-            <button class="log">
-                S'inscrire
-            </button>
+            <div class="navbar__actions">
 
-            <button class="log">
-                Se connecter
-            </button>
+                <button class="navbar__button--register">
+                    S'inscrire
+                </button>
 
-        </div>
+                <button class="navbar__button--login">
+                    Se connecter
+                </button>
+
+            </div>
+
+        </nav>
 
     </header>
 
-    <main>
 
-        <div class="hero-section">
-            <H1>
+    <main class="main">
+
+        <div class="hero">
+
+            <h1 class="hero__title">
                 La néobanque éthique & transparente
-            </H1>
+            </h1>
 
-            <h2>
+            <h2 class="hero__subtitle">
                 Finance ton avenir avec une banque qui te ressemble.
                 <br>
                 Honnête, engagée et sans prise de tête
             </h2>
+
         </div>
 
-        <div class="cta">
-            <button class="download">
+
+
+        <div class="hero__cta">
+
+            <button class="hero__button">
                 Téléchargez l'app !
             </button>
 
         </div>
 
-        <div class="promo">
-            <p>
+
+        <div class="promo-card">
+
+            <p class="promo-card__text">
                 20€ offerts - Mars 2026
             </p>
+
         </div>
 
-        <div class="socialmedia">
 
-            <img src="images/bluesky-logo.svg" alt="bluesky" class="icon">
-            <img src="images/mastodon-logo.svg" alt="mastodon" class="icon">
-            <img src="images/telegram-logo.svg" alt="telegram" class="icon">
+
+        <div class="social">
+
+            <img src="images/bluesky-logo.svg" alt="bluesky" class="social__icon">
+            <img src="images/mastodon-logo.svg" alt="mastodon" class="social__icon">
+            <img src="images/telegram-logo.svg" alt="telegram" class="social__icon">
 
         </div>
 
     </main>
 
-    <footer>
 
-        <div class="footer-links">
+    <footer class="footer">
 
-            <p class="legal-links">
-                Mentions légales | Confidentialité | CGU | Contact
-            </p>
-        </div>
+        <nav class="footer__nav">
+
+            <a href="#" class="footer__link">Mentions légales</a>
+            <span class="footer__separator">|</span>
+            <a href="#" class="footer__link">Confidentialité</a>
+            <span class="footer__separator">|</span>
+            <a href="#" class="footer__link">CGU</a>
+            <span class="footer__separator">|</span>
+            <a href="#" class="footer__link">Contact</a>
+
+        </nav>
 
     </footer>
+
 
 </body>
 
