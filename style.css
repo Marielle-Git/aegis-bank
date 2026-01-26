@@ -1,0 +1,122 @@
+/* barre de naavigation */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Titre et sous titre */
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 6.25rem;
+}
+
+/* SECTION S'inscrire / se connecter */
+
+.connect {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25rem;
+}
+
+/* SECTION TELECHARGER */
+
+.cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    border: none;
+}
+
+/* BOUTONS S'inscrire / se connecter */
+
+.log {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    font-size: 0.75rem;
+    justify-content: flex-start;
+    margin-top: 0.4rem;
+}
+
+/* BOUTONS TELECHARGER */
+
+.download {
+    background-color: #8A65B5;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+}
+
+.download:hover {
+    background-color: #6D4998;
+}
+
+.promo {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.logo {
+    display: flex;
+    width: 2.5rem;
+}
+
+
+/* Icones réseaux sociaux */
+
+.icon {
+    display: flex;
+    width: 1.5rem;
+    margin-top: 4rem;
+}
+
+/* SECTION réseaux sociaux*/
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+
+h1 {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h2 {
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: 100;
+    font-size: 0.875rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.legal-links {
+    display: flex;
+    font-size: 0.625rem;
+    justify-content: center;
+    margin-top: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
