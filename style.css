@@ -1,25 +1,55 @@
-/*----------------------- VARIABLES ET DESIGN SYSTEM -----------------------*/
+/****************************************************************************/
+/*                     VARIABLES CSS - DESIGN SYSTEM                        */
 /****************************************************************************/
 
 :root {
-
+    /* Couleurs principales */
     --color-primary: #8A65B5;
     --color-primary-dark: #6D4998;
     --color-gradient-start: #271a37;
+
+    /* Couleurs de texte */
     --color-text-dark: #333;
     --color-text-medium: #666;
     --color-text-light: #E0E0E0;
+
+    /* Couleurs de fond */
     --color-background-body: #F8F8F8;
     --color-background-footer: #F5F3F7;
     --color-white: white;
 
+    /* Typographie */
     --font-main: Arial, Helvetica, sans-serif;
 }
 
 
-/*
-"Remise à 0" du body. 
-Hauteur minimale -> écran complet
+/****************************************************************************/
+/*                              ANIMATIONS                                  */
+/****************************************************************************/
+
+/* Animation d'apparition du titre hero */
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/****************************************************************************/
+/*                              BASE STYLES                                 */
+/****************************************************************************/
+
+/* 
+Remise à zéro et configuration de base du body
+- Flex pour sticky footer
+- Hauteur minimale 100vh
 */
 
 body {
@@ -32,12 +62,13 @@ body {
 }
 
 
-
-/*----------------------------------------------------------------------*/
-/* ------------------------------ HEADER ------------------------------ */
+/****************************************************************************/
+/*                                 HEADER                                   */
+/****************************************************************************/
 
 /* 
-Style de la navbar
+Conteneur principal du header
+- Fond blanc avec ombre légère
 */
 
 .header {
@@ -45,18 +76,18 @@ Style de la navbar
     box-shadow: 0 2px 8px #0000000a;
 }
 
-/*
-BURGER MENU TEST
-*/
+/* Bouton burger menu */
 
 .navbar__burger {
     background: none;
     border: none;
+    cursor: pointer;
 }
 
-
-/*
-Positionnements du burger menu et des boutons "se connecter" et "s'inscrire" 
+/* 
+Navigation principale
+- Disposition flex avec espacement entre éléments
+- Alignement vertical centré
 */
 
 .navbar {
@@ -66,6 +97,8 @@ Positionnements du burger menu et des boutons "se connecter" et "s'inscrire"
     padding: 1.5rem 0.5rem;
 }
 
+/* Container des boutons d'authentification */
+
 .navbar__actions {
     display: flex;
     justify-content: flex-end;
@@ -74,7 +107,8 @@ Positionnements du burger menu et des boutons "se connecter" et "s'inscrire"
 }
 
 /* 
-Style et emplacement des boutons "s'inscrire" et "se connecter"
+Styles de base des boutons navbar
+- Styles communs aux boutons "S'inscrire" et "Se connecter"
 */
 
 .navbar__button--register,
@@ -89,7 +123,8 @@ Style et emplacement des boutons "s'inscrire" et "se connecter"
 }
 
 /* 
-Style et animation du bouton "s'inscrire"
+Bouton "S'inscrire"
+- Style primaire avec fond mauve
 */
 
 .navbar__button--register {
@@ -105,7 +140,8 @@ Style et animation du bouton "s'inscrire"
 }
 
 /* 
-Style et animation du bouton "se connecter"
+Bouton "Se connecter"
+- Style secondaire avec bordure
 */
 
 .navbar__button--login {
@@ -119,11 +155,15 @@ Style et animation du bouton "se connecter"
     color: var(--color-primary);
 }
 
-/*----------------------------------------------------------------------*/
-/* ------------------------------- MAIN ------------------------------- */
 
-/*
-Positionnement de limites sur le main pour responsive
+/****************************************************************************/
+/*                                  MAIN                                    */
+/****************************************************************************/
+
+/* 
+Container principal
+- Padding latéral pour responsive
+- Flex:1 pour sticky footer
 */
 
 .main {
@@ -132,9 +172,13 @@ Positionnement de limites sur le main pour responsive
     flex: 1;
 }
 
+
+/* ----------------------------- HERO SECTION ----------------------------- */
+
 /* 
-Positionnement de la class "hero"
-Limites max si la taille d'écran 
+Section hero
+- Centrage vertical et horizontal
+- Largeur maximale pour lisibilité
 */
 
 .hero {
@@ -147,17 +191,21 @@ Limites max si la taille d'écran
     margin-right: auto;
 }
 
-
-/* 
-Positionnement et style "titre" et "sous-titre"
-*/
+/* Titre principal avec effet gradient et animation */
 
 .hero__title {
     font-size: 2rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     font-family: var(--font-main);
+    background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: reveal 1.2s ease-out;
 }
+
+/* Sous-titre */
 
 .hero__subtitle {
     margin-bottom: 4rem;
@@ -168,36 +216,10 @@ Positionnement et style "titre" et "sous-titre"
     font-family: var(--font-main);
 }
 
-/* 
-Animation "titre" et "sous-titre"
-*/
 
-@keyframes reveal {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+/* --------------------------- CTA PRINCIPAL --------------------------- */
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero__title {
-    background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-primary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.hero__title {
-    animation: reveal 1.2s ease-out;
-}
-
-/* 
-Positionnement bouton CTA "Télécharger l'app"
-*/
+/* Container du bouton CTA */
 
 .hero__cta {
     display: flex;
@@ -206,12 +228,10 @@ Positionnement bouton CTA "Télécharger l'app"
 }
 
 /* 
-Style bouton CTA "télécharger l'app"
+Bouton "Téléchargez l'app !"
+- Style primaire avec ombre
+- Animations au hover
 */
-
-.hero__button:hover {
-    background-color: var(--color-primary-dark);
-}
 
 .hero__button {
     background-color: var(--color-primary);
@@ -221,25 +241,20 @@ Style bouton CTA "télécharger l'app"
     text-align: center;
     font-size: 1.25rem;
     border-radius: 1.5rem;
-}
-
-/* 
-Animation bouton CTA "télécharger l'app"
-*/
-
-.hero__button {
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(138, 101, 181, 0.2);
 }
 
 .hero__button:hover {
+    background-color: var(--color-primary-dark);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(138, 101, 181, 0.4);
 }
 
-/* 
-positionnement card promotionnelle
-*/
+
+/* ------------------------ CARD PROMOTIONNELLE ------------------------ */
+
+/* Container de la card promo */
 
 .promo-card {
     display: flex;
@@ -247,9 +262,7 @@ positionnement card promotionnelle
     margin-top: 3rem;
 }
 
-/* 
-Style carte promotionnelle
-*/
+/* Texte de la card */
 
 .promo-card__text {
     font-family: var(--font-main);
@@ -257,20 +270,25 @@ Style carte promotionnelle
     line-height: 1.6;
 }
 
+/* Montant "20€ offerts" */
+
 .promo-card__amount {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-primary);
 }
 
+/* Date "Mars 2026" */
+
 .promo-card__date {
     font-size: 0.875rem;
     color: var(--color-text-medium);
 }
 
-/* 
-Positionnement logos réseaux sociaux
-*/
+
+/* ------------------------- RÉSEAUX SOCIAUX ------------------------- */
+
+/* Container des icônes sociales */
 
 .social {
     display: flex;
@@ -281,7 +299,9 @@ Positionnement logos réseaux sociaux
 }
 
 /* 
-Style logos réseaux sociaux
+Icônes réseaux sociaux
+- Effet grayscale par défaut
+- Animations au hover
 */
 
 .social__icon {
@@ -296,11 +316,15 @@ Style logos réseaux sociaux
     filter: grayscale(0%) opacity(1);
 }
 
-/*----------------------------------------------------------------------*/
-/* ------------------------------ FOOTER ------------------------------ */
 
-/*
-Style et position du footer
+/****************************************************************************/
+/*                                 FOOTER                                   */
+/****************************************************************************/
+
+/* 
+Container principal du footer
+- Fond gris-mauve
+- Pleine largeur
 */
 
 .footer {
@@ -309,9 +333,7 @@ Style et position du footer
     width: 100%;
 }
 
-/* 
-Agencement du footer
-*/
+/* Navigation du footer avec liens légaux */
 
 .footer__nav {
     display: flex;
@@ -320,9 +342,7 @@ Agencement du footer
     gap: 0.5rem;
 }
 
-/* 
-Style du footer : liens légaux
-*/
+/* Liens légaux */
 
 .footer__link {
     font-family: var(--font-main);
@@ -331,6 +351,8 @@ Style du footer : liens légaux
     text-decoration: none;
     color: var(--color-text-dark);
 }
+
+/* Séparateurs entre les liens */
 
 .footer__separator {
     font-size: 0.625rem;
