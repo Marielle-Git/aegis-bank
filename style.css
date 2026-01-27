@@ -1,3 +1,22 @@
+/*----------------------- VARIABLES ET DESIGN SYSTEM -----------------------*/
+/****************************************************************************/
+
+:root {
+
+    --color-primary: #8A65B5;
+    --color-primary-dark: #6D4998;
+    --color-gradient-start: #271a37;
+    --color-text-dark: #333;
+    --color-text-medium: #666;
+    --color-text-light: #E0E0E0;
+    --color-background-body: #F8F8F8;
+    --color-background-footer: #F5F3F7;
+    --color-white: white;
+
+    --font-main: Arial, Helvetica, sans-serif;
+}
+
+
 /*
 "Remise à 0" du body. 
 Hauteur minimale -> écran complet
@@ -7,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #F8F8F8;
+    background: var(--color-background-body);
     margin: 0;
     padding: 0;
 }
@@ -22,7 +41,7 @@ Style de la navbar
 */
 
 .header {
-    background: white;
+    background: var(--color-white);
     box-shadow: 0 2px 8px #0000000a;
 }
 
@@ -66,6 +85,7 @@ Style et emplacement des boutons "s'inscrire" et "se connecter"
     padding: 0.625rem 1.25rem;
     font-size: 0.875rem;
     transition: all 0.2s ease;
+    font-family: var(--font-main);
 }
 
 /* 
@@ -73,14 +93,14 @@ Style et animation du bouton "s'inscrire"
 */
 
 .navbar__button--register {
-    background: #8A65B5;
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-white);
     border: none;
     font-weight: 500;
 }
 
 .navbar__button--register:hover {
-    background: #6D4998;
+    background: var(--color-primary-dark);
     transform: translateY(-1px);
 }
 
@@ -90,13 +110,13 @@ Style et animation du bouton "se connecter"
 
 .navbar__button--login {
     background: none;
-    border: 0.063rem solid #E0E0E0;
+    border: 0.063rem solid var(--color-text-light);
     font-weight: 500;
 }
 
 .navbar__button--login:hover {
-    border-color: #8A65B5;
-    color: #8A65B5;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 /*----------------------------------------------------------------------*/
@@ -136,7 +156,7 @@ Positionnement et style "titre" et "sous-titre"
     font-size: 2rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-main);
 }
 
 .hero__subtitle {
@@ -145,7 +165,7 @@ Positionnement et style "titre" et "sous-titre"
     margin-right: 0.5rem;
     font-weight: 100;
     font-size: 0.875rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-main);
 }
 
 /* 
@@ -165,7 +185,7 @@ Animation "titre" et "sous-titre"
 }
 
 .hero__title {
-    background: linear-gradient(135deg, #271a37 0%, #8A65B5 100%);
+    background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -190,12 +210,12 @@ Style bouton CTA "télécharger l'app"
 */
 
 .hero__button:hover {
-    background-color: #6D4998;
+    background-color: var(--color-primary-dark);
 }
 
 .hero__button {
-    background-color: #8A65B5;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     border: none;
     padding: 1rem 2rem;
     text-align: center;
@@ -232,7 +252,7 @@ Style carte promotionnelle
 */
 
 .promo-card__text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-main);
     text-align: center;
     line-height: 1.6;
 }
@@ -240,12 +260,12 @@ Style carte promotionnelle
 .promo-card__amount {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #8A65B5;
+    color: var(--color-primary);
 }
 
 .promo-card__date {
     font-size: 0.875rem;
-    color: #666;
+    color: var(--color-text-medium);
 }
 
 /* 
@@ -284,7 +304,7 @@ Style et position du footer
 */
 
 .footer {
-    background: #F5F3F7;
+    background: var(--color-background-footer);
     padding: 3rem 0;
     width: 100%;
 }
@@ -305,14 +325,14 @@ Style du footer : liens légaux
 */
 
 .footer__link {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-main);
     font-size: 0.625rem;
     font-weight: 100;
     text-decoration: none;
-    color: #333;
+    color: var(--color-text-dark);
 }
 
 .footer__separator {
     font-size: 0.625rem;
-    color: #333;
+    color: var(--color-text-dark);
 }
