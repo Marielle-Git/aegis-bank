@@ -1,50 +1,132 @@
+/*
+"Remise à 0" du body. 
+Hauteur minimale -> écran complet
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #F8F8F8;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 /*----------------------------------------------------------------------*/
 /* ------------------------------ HEADER ------------------------------ */
 
 /* 
-Positionnements du burger menu et des boutons "se connecter" et "s'inscrire" 
+Style de la navbar
 */
 
+.header {
+    background: white;
+    box-shadow: 0 2px 8px #0000000a;
+}
+
+/*
+BURGER MENU TEST
+*/
+
+.navbar__burger {
+    background: none;
+    border: none;
+}
+
+
+/*
+Positionnements du burger menu et des boutons "se connecter" et "s'inscrire" 
+*/
 
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0.5rem;
 }
 
 .navbar__actions {
     display: flex;
     justify-content: flex-end;
-    gap: 0.25rem;
+    gap: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 /* 
-Style des boutons "se connecter" et "s'inscrire" 
+Style et emplacement des boutons "s'inscrire" et "se connecter"
 */
 
 .navbar__button--register,
 .navbar__button--login {
     display: flex;
-    border: none;
-    background-color: transparent;
-    font-size: 0.75rem;
     justify-content: flex-start;
-    margin-top: 0.4rem;
+    border-radius: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
 }
 
+/* 
+Style et animation du bouton "s'inscrire"
+*/
+
+.navbar__button--register {
+    background: #8A65B5;
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+
+.navbar__button--register:hover {
+    background: #6D4998;
+    transform: translateY(-1px);
+}
+
+/* 
+Style et animation du bouton "se connecter"
+*/
+
+.navbar__button--login {
+    background: none;
+    border: 0.063rem solid #E0E0E0;
+    font-weight: 500;
+}
+
+.navbar__button--login:hover {
+    border-color: #8A65B5;
+    color: #8A65B5;
+}
 
 /*----------------------------------------------------------------------*/
 /* ------------------------------- MAIN ------------------------------- */
 
+/*
+Positionnement de limites sur le main pour responsive
+*/
+
+.main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: 1;
+}
+
 /* 
 Positionnement de la class "hero"
+Limites max si la taille d'écran 
 */
 
 .hero {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
-    margin-top: 6.25rem;
+    margin-top: 5rem;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 /* 
 Positionnement et style "titre" et "sous-titre"
@@ -58,12 +140,39 @@ Positionnement et style "titre" et "sous-titre"
 }
 
 .hero__subtitle {
-    display: flex;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-bottom: 4rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     font-weight: 100;
     font-size: 0.875rem;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+Animation "titre" et "sous-titre"
+*/
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero__title {
+    background: linear-gradient(135deg, #271a37 0%, #8A65B5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero__title {
+    animation: reveal 1.2s ease-out;
 }
 
 /* 
@@ -73,7 +182,6 @@ Positionnement bouton CTA "Télécharger l'app"
 .hero__cta {
     display: flex;
     justify-content: center;
-    margin-top: 6rem;
     border: none;
 }
 
@@ -92,7 +200,21 @@ Style bouton CTA "télécharger l'app"
     padding: 1rem 2rem;
     text-align: center;
     font-size: 1.25rem;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
+}
+
+/* 
+Animation bouton CTA "télécharger l'app"
+*/
+
+.hero__button {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(138, 101, 181, 0.2);
+}
+
+.hero__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(138, 101, 181, 0.4);
 }
 
 /* 
@@ -102,7 +224,28 @@ positionnement card promotionnelle
 .promo-card {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
+}
+
+/* 
+Style carte promotionnelle
+*/
+
+.promo-card__text {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.promo-card__amount {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #8A65B5;
+}
+
+.promo-card__date {
+    font-size: 0.875rem;
+    color: #666;
 }
 
 /* 
@@ -112,9 +255,9 @@ Positionnement logos réseaux sociaux
 .social {
     display: flex;
     justify-content: center;
-    justify-content: space-between;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
 }
 
 /* 
@@ -122,16 +265,32 @@ Style logos réseaux sociaux
 */
 
 .social__icon {
-    width: 1.5rem;
-    margin-top: 4rem;
+    width: 2rem;
+    transition: all 0.3s ease;
+    filter: grayscale(40%) opacity(0.7);
+    cursor: pointer;
 }
 
+.social__icon:hover {
+    transform: scale(1.15) translateY(-2px);
+    filter: grayscale(0%) opacity(1);
+}
 
 /*----------------------------------------------------------------------*/
 /* ------------------------------ FOOTER ------------------------------ */
 
+/*
+Style et position du footer
+*/
+
+.footer {
+    background: #F5F3F7;
+    padding: 3rem 0;
+    width: 100%;
+}
+
 /* 
-Positionnement du footer
+Agencement du footer
 */
 
 .footer__nav {
@@ -139,7 +298,6 @@ Positionnement du footer
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 4rem;
 }
 
 /* 
