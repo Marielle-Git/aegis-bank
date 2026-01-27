@@ -38,7 +38,7 @@ Variables CSS implémentées pour :
 - **Typographie** : Arial/Helvetica pour lisibilité optimale
 - **Animations** : Effets hover subtils et professionnels
 
-## 📸 Aperçu
+## Aperçu
 
 ![Aegis Bank - Aperçu mobile](images/screenshot.png)
 
@@ -47,7 +47,7 @@ Variables CSS implémentées pour :
 
 https://6978dcf2acc2cf006ebb6bd2--majestic-griffin-737815.netlify.app
 
-## 📂 Structure du projet
+## Structure du projet
 ```
 aegis-bank/
 ├── index.html          # Page principale
