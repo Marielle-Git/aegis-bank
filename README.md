@@ -59,7 +59,7 @@ aegis-bank/
 └── README.md
 ```
 
-## Auteur
+## À Propos
 
 **Marielle Limbourg** - Étudiante UX/UI Design en alternance à l'EFP (Bruxelles)
 
