@@ -31,7 +31,7 @@ Landing page développée dans le cadre d'une mission fictive pour **Namcod**, s
 - **Navigation** avec burger menu et boutons d'authentification
 - **Footer** avec liens légaux
 
-## 🎨 Design System
+## Design System
 
 Variables CSS implémentées pour :
 - **Couleurs** : Palette mauve (#8A65B5) cohérente
