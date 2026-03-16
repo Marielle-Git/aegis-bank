@@ -2,58 +2,44 @@
 <html lang="fr">
 
 <head>
+
+    <!-- =====================================================
+    META & SEO
+    Configuration de base du document :
+    charset, viewport, description SEO et titre
+    ====================================================== -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aegis Bank, la néobanque éthique pour les créateurs de contenu. 
         Finance ton avenir avec transparence. 20€ offerts.">
     <title>Aegis Bank - néobanque éthique et transparente</title>
+
+    <!-- =====================================================
+    STYLESHEET
+    Fichier CSS principal du projet
+    ====================================================== -->
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="style.css">
+
+
 </head>
-
-<!--
-
-<div class="hero__cta"> : je crois que cette div est en trop & ne sert à rien. A vérifier.
-
-    
-<div class="promo-card"> : je t'invite ) faire des cherches sur quelle balise on a 
-    tendance à utiliser pour un card. Ce serait intéressant aussi d'explorer quand 
-    est-ce que BEM ne s'applique pas et pour quelles raisons. Explore le mot clé 
-    'component' pour mieux saisir la nuance. N'hésite pas à me solliciter pour qu'on 
-    en parle lors d'une de nos prochaines sessions.
-
-<div class="promo-card"> :  toutes les balises dans ce card font un peu bricolage 
-    avec un seul <p>, 2 <span> & un <br> au centre. Je comprends la démarche mais 
-    pas simple à maintenir.
-
-<img src="images/bluesky-logo.svg" alt="bluesky" class="social__icon"> : ce sont 
-    de liens qui mènent vers les réseaux sociaux, même non fonctionnel, il faut implémenter 
-    les balsies correspondantes. Et de préférence ne pas utiliser la balises <img> pour des 
-
-    icons : explore les possibilités d'optimisation.
-
-N'oublie pas de commenter (version pro) ton code même HTML.
-
-min-height: 100vh; : ton projet ne peut pas être zero-scroll avec un min-height. 
-
-Explore comment optimiser partant de cette base.
-
-formidable ! Next level, créer des fichiers séparés pour chaque type de variable 
-    & animation. Explore quelles raisons faire ça & comment le faire. 
-
--->
 
 <body>
 
-    <!-------------------------------------------------------
-    <x1 et y1> définis ou commence la ligne
-    <x2 et y2> définis ou termine la ligne (px)
-    stroke #333 - couleur 
-    width - largeur
-    -------------------------------------------------------->
+    <!-- =====================================================
+    HEADER
+    Contient la navigation principale du site
+    ====================================================== -->
 
     <header class="header">
 
+        <!-- Navigation principale -->
+
         <div class="navbar">
+
+            <!-- Burger menu (mobile navigation trigger) -->
 
             <button class="navbar__burger">
 
@@ -65,6 +51,8 @@ formidable ! Next level, créer des fichiers séparés pour chaque type de varia
 
             </button>
 
+
+            <!-- Actions utilisateur : login / register -->
 
             <div class="navbar__actions">
 
@@ -83,7 +71,26 @@ formidable ! Next level, créer des fichiers séparés pour chaque type de varia
     </header>
 
 
+    <!-- =====================================================
+    MAIN
+    Contenu principal de la page
+    ====================================================== -->
+
     <main class="main">
+
+
+        <!-- =================================================
+        HERO SECTION
+        Présentation principale du produit / message marketing
+        BOUTON CALL TO ACTION
+        ================================================== -->
+
+        <!--
+        Correction : Ma div <hero-cta> servait à justifier l'emplacement de bouton,
+            en passant via display : block; et par margin 0 auto, je peux supprimer 
+            ma balise superflue et alléger mon code.
+
+        -->
 
         <div class="hero">
 
@@ -97,12 +104,6 @@ formidable ! Next level, créer des fichiers séparés pour chaque type de varia
                 Honnête, engagée et sans prise de tête
             </h2>
 
-        </div>
-
-
-
-        <div class="hero__cta">
-
             <button class="hero__button">
                 Téléchargez l'app !
             </button>
@@ -110,36 +111,95 @@ formidable ! Next level, créer des fichiers séparés pour chaque type de varia
         </div>
 
 
-        <div class="promo-card">
 
-            <p class="promo-card__text">
+        <!-- =================================================
+        PROMO CARD
+        Offre promotionnelle actuelle
+        ================================================== -->
 
-                <span class="promo-card__amount">
-                    20€ offerts
-                </span>
+        <!-- 
+        correction : une card représente un contenu autonome et indépendant,
+        <article> au lieu de <div>.
+        
+        corection : utilisation de <strong> 
+-->
 
-                <br>
+        <article class="promo-card">
+            <strong class="promo-card__amount">20€ offerts</strong>
+            <p class="promo-card__date">Mars 2026</p>
+        </article>
 
-                <span class="promo-card__date">
-                    Mars 2026
-                </span>
+        <!-- =================================================
+        SOCIAL LINKS
+        Accès aux réseaux sociaux du projet
+        ================================================== -->
 
-            </p>
-
-        </div>
-
-
+        <!--
+        correction : les <img> ont été remplacées par des svg inline dans des <a>
+        car : meilleure accessibilité, bonne sémantique et contrôle taille et effet via css
+        -->
 
         <div class="social">
 
-            <img src="images/bluesky-logo.svg" alt="bluesky" class="social__icon">
-            <img src="images/mastodon-logo.svg" alt="mastodon" class="social__icon">
-            <img src="images/telegram-logo.svg" alt="telegram" class="social__icon">
+
+            <a href="#" class="social__link">
+                <svg width="100%" height="100%" viewBox="0 0 256 226" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid">
+                    <title>Bluesky</title>
+                    <g>
+                        <path
+                            d="M55.4911549,15.1724797 C84.8410141,37.2065079 116.408338,81.8843671 128,105.858226 C139.591662,81.8843671 171.158986,37.2065079 200.508845,15.1724797 C221.686085,-0.726562511 256,-13.0280836 256,26.1164797 C256,33.9343952 251.517746,91.7899445 248.888789,101.183522 C239.750761,133.838395 206.452732,142.167409 176.832451,137.126283 C228.607099,145.938001 241.777577,175.125607 213.333183,204.313212 C159.311775,259.746226 135.689465,190.40493 129.636507,172.637268 C128.526873,169.380029 128.007662,167.856198 128,169.151973 C127.992338,167.856198 127.473127,169.380029 126.363493,172.637268 C120.310535,190.40493 96.6882254,259.746226 42.6668169,204.313212 C14.2224225,175.125607 27.3929014,145.938001 79.1675493,137.126283 C49.5472676,142.167409 16.2492394,133.838395 7.11121127,101.183522 C4.48225352,91.7899445 0,33.9343952 0,26.1164797 C0,-13.0280836 34.3139155,-0.726562511 55.4911549,15.1724797 Z"
+                            fill="#1185FE" />
+                    </g>
+                </svg>
+            </a>
+
+            <a href="#" class="social__link">
+                <?xml version="1.0" encoding="UTF-8"?>
+                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="100%" height="100%" viewBox="-9 0 274 274" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                    <g>
+                        <path
+                            d="M249.874103,164.084793 C246.121107,183.392442 216.260831,204.522765 181.966269,208.61788 C164.083135,210.751705 146.475762,212.712995 127.700462,211.851797 C96.9952088,210.444977 72.7666374,204.522765 72.7666374,204.522765 C72.7666374,207.511889 72.9509692,210.357972 73.3196328,213.019724 C77.3115222,243.322396 103.36719,245.137696 128.048481,245.984147 C152.959817,246.836498 175.141568,239.842212 175.141568,239.842212 L176.164978,262.363134 C176.164978,262.363134 158.740462,271.719816 127.700462,273.440737 C110.584149,274.381567 89.33143,273.010138 64.5778816,266.458249 C10.8916144,252.248479 1.65880329,195.021567 0.246084399,136.955576 C-0.184514679,119.715392 0.080923109,103.458802 0.080923109,89.8624885 C0.080923109,30.4870046 38.9837803,13.0831336 38.9837803,13.0831336 C58.5996328,4.07447005 92.258619,0.286082949 127.250693,0 L128.110416,0 C163.10249,0.286082949 196.783596,4.07447005 216.397974,13.0831336 C216.397974,13.0831336 255.299356,30.4870046 255.299356,89.8624885 C255.299356,89.8624885 255.787467,133.670046 249.874103,164.084793"
+                            fill="#3088D4">
+
+                        </path>
+                        <path
+                            d="M209.412536,94.4687189 L209.412536,166.362544 L180.929587,166.362544 L180.929587,96.5818986 C180.929587,81.8722212 174.740462,74.4060461 162.360739,74.4060461 C148.672997,74.4060461 141.812905,83.2628203 141.812905,100.775816 L141.812905,138.970839 L113.498066,138.970839 L113.498066,100.775816 C113.498066,83.2628203 106.636499,74.4060461 92.9487572,74.4060461 C80.5690337,74.4060461 74.3799093,81.8722212 74.3799093,96.5818986 L74.3799093,166.362544 L45.89696,166.362544 L45.89696,94.4687189 C45.89696,79.7752627 49.6381581,68.0989493 57.1529968,59.460424 C64.9023056,50.8218986 75.050877,46.3935115 87.6488494,46.3935115 C102.224333,46.3935115 113.262121,51.9957235 120.560186,63.2016221 L127.654748,75.0947097 L134.750785,63.2016221 C142.047375,51.9957235 153.085163,46.3935115 167.662121,46.3935115 C180.258619,46.3935115 190.40719,50.8218986 198.157974,59.460424 C205.671338,68.0989493 209.412536,79.7752627 209.412536,94.4687189"
+                            fill="#FFFFFF">
+
+                        </path>
+                    </g>
+                </svg>
+            </a>
+
+            <a href="#" class="social__link">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14" fill="url(#paint0_linear_87_7225)" />
+                    <path
+                        d="M22.9866 10.2088C23.1112 9.40332 22.3454 8.76755 21.6292 9.082L7.36482 15.3448C6.85123 15.5703 6.8888 16.3483 7.42147 16.5179L10.3631 17.4547C10.9246 17.6335 11.5325 17.541 12.0228 17.2023L18.655 12.6203C18.855 12.4821 19.073 12.7665 18.9021 12.9426L14.1281 17.8646C13.665 18.3421 13.7569 19.1512 14.314 19.5005L19.659 22.8523C20.2585 23.2282 21.0297 22.8506 21.1418 22.1261L22.9866 10.2088Z"
+                        fill="white" />
+                    <defs>
+                        <linearGradient id="paint0_linear_87_7225" x1="16" y1="2" x2="16" y2="30"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#37BBFE" />
+                            <stop offset="1" stop-color="#007DBB" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
 
         </div>
 
     </main>
 
+
+    <!-- =====================================================
+    FOOTER
+    Navigation secondaire et informations légales
+    ====================================================== -->
 
     <footer class="footer">
 

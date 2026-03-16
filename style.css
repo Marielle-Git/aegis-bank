@@ -1,48 +1,4 @@
 /****************************************************************************/
-/*                     VARIABLES CSS - DESIGN SYSTEM                        */
-/****************************************************************************/
-
-:root {
-    /* Couleurs principales */
-    --color-primary: #8A65B5;
-    --color-primary-dark: #6D4998;
-    --color-gradient-start: #271a37;
-
-    /* Couleurs de texte */
-    --color-text-dark: #333;
-    --color-text-medium: #666;
-    --color-text-light: #E0E0E0;
-
-    /* Couleurs de fond */
-    --color-background-body: #F8F8F8;
-    --color-background-footer: #F5F3F7;
-    --color-white: white;
-
-    /* Typographie */
-    --font-main: Arial, Helvetica, sans-serif;
-}
-
-
-/****************************************************************************/
-/*                              ANIMATIONS                                  */
-/****************************************************************************/
-
-/* Animation d'apparition du titre hero */
-
-@keyframes reveal {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/****************************************************************************/
 /*                              BASE STYLES                                 */
 /****************************************************************************/
 
@@ -53,9 +9,10 @@ Remise à zéro et configuration de base du body
 */
 
 body {
+    height: 100vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     background: var(--color-background-body);
     margin: 0;
     padding: 0;
@@ -74,6 +31,7 @@ Conteneur principal du header
 .header {
     background: var(--color-white);
     box-shadow: 0 2px 8px #0000000a;
+    flex-shrink: 0;
 }
 
 /* Bouton burger menu */
@@ -163,7 +121,7 @@ Bouton "Se connecter"
 /* 
 Container principal
 - Padding latéral pour responsive
-- Flex:1 pour sticky footer
+- Flex:1 pour sticky footer, permet de 
 */
 
 .main {
@@ -219,14 +177,6 @@ Section hero
 
 /* --------------------------- CTA PRINCIPAL --------------------------- */
 
-/* Container du bouton CTA */
-
-
-.hero__cta {
-    display: flex;
-    justify-content: center;
-    border: none;
-}
 
 /* 
 Bouton "Téléchargez l'app !"
@@ -235,6 +185,8 @@ Bouton "Téléchargez l'app !"
 */
 
 .hero__button {
+    display: block;
+    margin: 0 auto;
     background-color: var(--color-primary);
     color: var(--color-white);
     border: none;
@@ -257,9 +209,20 @@ Bouton "Téléchargez l'app !"
 
 /* Container de la card promo */
 
+/* 
+correction : ajout de  
+
+flex-direction: column;
+align-items: center;
+
+
+*/
+
 .promo-card {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 3rem;
 }
 
@@ -305,14 +268,14 @@ Icônes réseaux sociaux
 - Animations au hover
 */
 
-.social__icon {
+.social__link svg {
     width: 2rem;
     transition: all 0.3s ease;
     filter: grayscale(40%) opacity(0.7);
     cursor: pointer;
 }
 
-.social__icon:hover {
+.social__link:hover svg {
     transform: scale(1.15) translateY(-2px);
     filter: grayscale(0%) opacity(1);
 }
@@ -332,6 +295,7 @@ Container principal du footer
     background: var(--color-background-footer);
     padding: 3rem 0;
     width: 100%;
+    flex-shrink: 0;
 }
 
 /* Navigation du footer avec liens légaux */
@@ -358,4 +322,3 @@ Container principal du footer
 .footer__separator {
     font-size: 0.625rem;
     color: var(--color-text-dark);
-}

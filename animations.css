@@ -1,0 +1,17 @@
+/****************************************************************************/
+/*                              ANIMATIONS                                  */
+/****************************************************************************/
+
+/* Animation d'apparition du titre hero */
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

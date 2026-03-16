@@ -1,0 +1,23 @@
+/****************************************************************************/
+/*                     VARIABLES CSS - DESIGN SYSTEM                        */
+/****************************************************************************/
+
+:root {
+    /* Couleurs principales */
+    --color-primary: #8A65B5;
+    --color-primary-dark: #6D4998;
+    --color-gradient-start: #271a37;
+
+    /* Couleurs de texte */
+    --color-text-dark: #333;
+    --color-text-medium: #666;
+    --color-text-light: #E0E0E0;
+
+    /* Couleurs de fond */
+    --color-background-body: #F8F8F8;
+    --color-background-footer: #F5F3F7;
+    --color-white: white;
+
+    /* Typographie */
+    --font-main: Arial, Helvetica, sans-serif;
+}
