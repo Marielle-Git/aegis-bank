@@ -1,6 +1,4 @@
-/****************************************************************************/
-/*                     VARIABLES CSS - DESIGN SYSTEM                        */
-/****************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap');
 
 :root {
     /* Couleurs principales */
@@ -19,5 +17,6 @@
     --color-white: white;
 
     /* Typographie */
-    --font-main: Arial, Helvetica, sans-serif;
+    --font-main: 'DM Sans', Arial, sans-serif;
+    --font-title: 'Syne', Arial, sans-serif;
 }

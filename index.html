@@ -3,11 +3,11 @@
 
 <head>
 
-    <!-- =====================================================
+    <!-- 
     META & SEO
     Configuration de base du document :
     charset, viewport, description SEO et titre
-    ====================================================== -->
+    -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +15,10 @@
         Finance ton avenir avec transparence. 20€ offerts.">
     <title>Aegis Bank - néobanque éthique et transparente</title>
 
-    <!-- =====================================================
+    <!-- 
     STYLESHEET
     Fichier CSS principal du projet
-    ====================================================== -->
+    -->
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="style.css">
@@ -28,10 +28,10 @@
 
 <body>
 
-    <!-- =====================================================
+    <!-- 
     HEADER
     Contient la navigation principale du site
-    ====================================================== -->
+    -->
 
     <header class="header">
 
@@ -41,7 +41,7 @@
 
             <!-- Burger menu (mobile navigation trigger) -->
 
-            <button class="navbar__burger">
+            <button type="button" class="navbar__burger" aria-label="Ouvrir le menu de navigation">
 
                 <svg width="30" height="30" viewBox="0 0 30 30">
                     <line x1="5" y1="8" x2="25" y2="8" stroke="#333" stroke-width="2" stroke-linecap="round" />
@@ -56,11 +56,11 @@
 
             <div class="navbar__actions">
 
-                <button class="navbar__button--login">
+                <button type="button" class="navbar__button--login" aria-label="Se connecter">
                     Se connecter
                 </button>
 
-                <button class="navbar__button--register">
+                <button type="button" class="navbar__button--register" aria-label="S'inscrire">
                     S'inscrire
                 </button>
 
@@ -71,19 +71,19 @@
     </header>
 
 
-    <!-- =====================================================
+    <!-- 
     MAIN
     Contenu principal de la page
-    ====================================================== -->
+    -->
 
     <main class="main">
 
 
-        <!-- =================================================
+        <!-- 
         HERO SECTION
         Présentation principale du produit / message marketing
         BOUTON CALL TO ACTION
-        ================================================== -->
+        -->
 
         <!--
         Correction : Ma div <hero-cta> servait à justifier l'emplacement de bouton,
@@ -98,51 +98,70 @@
                 La néobanque éthique & transparente
             </h1>
 
-            <h2 class="hero__subtitle">
-                Finance ton avenir avec une banque qui te ressemble.
-                <br>
-                Honnête, engagée et sans prise de tête
-            </h2>
+            <div class="hero__subtitle">
+                <p>Finance ton avenir avec une banque qui te ressemble.</p>
+                <p>Honnête, engagée et sans prise de tête</p>
+            </div>
 
+            <!---
             <button class="hero__button">
                 Téléchargez l'app !
+            </button>
+            -->
+
+            <button type="button" class="hero__button" aria-label="Téléchargez l'app">
+                <span>Téléchargez l'app !</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 74 74" height="34" width="34">
+                    <circle stroke-width="3" stroke="white" r="35.5" cy="37" cx="37"></circle>
+                    <path fill="white"
+                        d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z">
+                    </path>
+                </svg>
             </button>
 
         </div>
 
 
 
-        <!-- =================================================
+        <!-- 
         PROMO CARD
         Offre promotionnelle actuelle
-        ================================================== -->
+        -->
 
         <!-- 
         correction : une card représente un contenu autonome et indépendant,
         <article> au lieu de <div>.
         
         corection : utilisation de <strong> 
--->
-
+        -->
+        <!--
         <article class="promo-card">
             <strong class="promo-card__amount">20€ offerts</strong>
             <p class="promo-card__date">Mars 2026</p>
         </article>
-
-        <!-- =================================================
-        SOCIAL LINKS
-        Accès aux réseaux sociaux du projet
-        ================================================== -->
-
-        <!--
-        correction : les <img> ont été remplacées par des svg inline dans des <a>
-        car : meilleure accessibilité, bonne sémantique et contrôle taille et effet via css
         -->
+
+        <!-- SOCIAL LINKS : Accès aux réseaux sociaux du projet -->
+
+        <article class="promo-card">
+            <h2 class="promo-card__label">Offre de lancement</h2>
+            <strong class="promo-card__amount">20€ offerts</strong>
+            <p class="promo-card__date">Mars 2026</p>
+
+            <div class="promo-card__card">
+                <span class="promo-card__card-name">Aegis</span>
+                <div class="promo-card__dots">
+                    <div class="promo-card__dot--purple"></div>
+                    <div class="promo-card__dot--green"></div>
+                </div>
+            </div>
+        </article>
+
 
         <div class="social">
 
 
-            <a href="#" class="social__link">
+            <a href="#" class="social__link" aria-label="Bluesky">
                 <svg width="100%" height="100%" viewBox="0 0 256 226" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     preserveAspectRatio="xMidYMid">
                     <title>Bluesky</title>
@@ -154,9 +173,7 @@
                 </svg>
             </a>
 
-            <a href="#" class="social__link">
-                <?xml version="1.0" encoding="UTF-8"?>
-                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <a href="#" class="social__link" aria-label="Mastodon">
                 <svg width="100%" height="100%" viewBox="-9 0 274 274" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
                     <g>
@@ -174,8 +191,7 @@
                 </svg>
             </a>
 
-            <a href="#" class="social__link">
-                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <a href="#" class="social__link" aria-label="Telegram">
                 <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="16" cy="16" r="14" fill="url(#paint0_linear_87_7225)" />
                     <path
@@ -184,7 +200,7 @@
                     <defs>
                         <linearGradient id="paint0_linear_87_7225" x1="16" y1="2" x2="16" y2="30"
                             gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#37BBFE" />
+                            <stop offset="0" stop-color="#37BBFE" />
                             <stop offset="1" stop-color="#007DBB" />
                         </linearGradient>
                     </defs>
@@ -196,10 +212,10 @@
     </main>
 
 
-    <!-- =====================================================
+    <!--
     FOOTER
     Navigation secondaire et informations légales
-    ====================================================== -->
+    -->
 
     <footer class="footer">
 

@@ -143,7 +143,7 @@ Section hero
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 4rem;
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
@@ -152,10 +152,10 @@ Section hero
 /* Titre principal avec effet gradient et animation */
 
 .hero__title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    font-family: var(--font-main);
+    font-family: var(--font-title);
     background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -167,13 +167,14 @@ Section hero
 
 .hero__subtitle {
     margin-bottom: 4rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
     font-weight: 100;
     font-size: 0.875rem;
     font-family: var(--font-main);
 }
 
+.hero__subtitle p {
+    margin: 0;
+}
 
 /* --------------------------- CTA PRINCIPAL --------------------------- */
 
@@ -184,6 +185,7 @@ Bouton "Téléchargez l'app !"
 - Animations au hover
 */
 
+/*
 .hero__button {
     display: block;
     margin: 0 auto;
@@ -203,7 +205,42 @@ Bouton "Téléchargez l'app !"
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(138, 101, 181, 0.4);
 }
+*/
 
+.hero__button {
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: var(--color-primary);
+    border: 1px solid transparent;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(138, 101, 181, 0.2);
+}
+
+.hero__button:hover {
+    background: var(--color-primary-dark);
+}
+
+.hero__button>svg {
+    width: 28px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero__button:hover svg {
+    transform: translateX(5px);
+}
+
+.hero__button:active {
+    transform: scale(0.95);
+}
 
 /* ------------------------ CARD PROMOTIONNELLE ------------------------ */
 
@@ -218,6 +255,7 @@ align-items: center;
 
 */
 
+/*
 .promo-card {
     display: flex;
     justify-content: center;
@@ -228,27 +266,125 @@ align-items: center;
 
 /* Texte de la card */
 
+/*
 .promo-card__text {
     font-family: var(--font-main);
     text-align: center;
     line-height: 1.6;
 }
+*/
 
 /* Montant "20€ offerts" */
 
+/*
 .promo-card__amount {
     font-size: 1.5rem;
+    font-family: var(--font-main);
     font-weight: 600;
     color: var(--color-primary);
 }
+*/
 
 /* Date "Mars 2026" */
 
+/*
 .promo-card__date {
     font-size: 0.875rem;
+    font-family: var(--font-main);
     color: var(--color-text-medium);
 }
+*/
 
+/**************************************************/
+/************** ANIMATION PROMO CARD **************/
+/**************************************************/
+
+.promo-card {
+    position: relative;
+    padding: 1.2rem 1.4rem;
+    margin-top: 5rem;
+    min-height: 120px;
+    overflow: hidden;
+}
+
+.promo-card__label {
+    font-size: 0.58rem;
+    color: #34b778;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin: 0 0 4px;
+}
+
+.promo-card__amount {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--color-gradient-start);
+    white-space: nowrap;
+}
+
+.promo-card__date {
+    font-size: 0.65rem;
+    font-weight: 300;
+    color: var(--color-primary);
+    margin: 4px 0 0;
+}
+
+.promo-card__card {
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    transform: translateY(-52%) rotate(12deg);
+    width: 150px;
+    height: 95px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-primary-dark));
+    box-shadow: 0 12px 36px rgba(39, 26, 55, 0.3);
+    padding: 0.8rem;
+    box-sizing: border-box;
+    animation: floatCard 4s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promo-card__card-name {
+    font-family: var(--font-title);
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.promo-card__dots {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.promo-card__dot--purple,
+.promo-card__dot--green {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+.promo-card__dot--purple {
+    background: rgba(138, 101, 181, 0.85);
+}
+
+.promo-card__dot--green {
+    background: rgba(52, 183, 120, 0.8);
+    margin-left: -7px;
+}
+
+@keyframes floatCard {
+
+    0%,
+    100% {
+        transform: translateY(-52%) rotate(12deg);
+    }
+
+    50% {
+        transform: translateY(-62%) rotate(12deg);
+    }
+}
 
 /* ------------------------- RÉSEAUX SOCIAUX ------------------------- */
 
@@ -257,9 +393,9 @@ align-items: center;
 .social {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 2rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
 }
 
 /* 
@@ -269,7 +405,7 @@ Icônes réseaux sociaux
 */
 
 .social__link svg {
-    width: 2rem;
+    width: 1.8rem;
     transition: all 0.3s ease;
     filter: grayscale(40%) opacity(0.7);
     cursor: pointer;
@@ -292,8 +428,7 @@ Container principal du footer
 */
 
 .footer {
-    background: var(--color-background-footer);
-    padding: 3rem 0;
+    padding: 0.3rem 0;
     width: 100%;
     flex-shrink: 0;
 }
@@ -322,3 +457,4 @@ Container principal du footer
 .footer__separator {
     font-size: 0.625rem;
     color: var(--color-text-dark);
+}
