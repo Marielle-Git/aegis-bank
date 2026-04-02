@@ -1,0 +1,35 @@
+/****************************************************************************/
+/*                        VARIABLES — TYPOGRAPHIE                           */
+/****************************************************************************/
+
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+
+    /* ----- Familles de polices ----- */
+    --font-main: 'DM Sans', Arial, sans-serif;
+    --font-title: 'Syne', Arial, sans-serif;
+
+    /* ----- Graisses ----- */
+    --font-weight-light: 300;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* -----------------------------------------------------------------------
+    Tailles fluides — clamp(min, fluid, max)
+    S'adaptent automatiquement entre une taille minimale et maximale
+    en fonction de la largeur du viewport, sans media query.
+    ----------------------------------------------------------------------- */
+
+    --text-xs: clamp(0.563rem, 1.2vw, 0.650rem);
+    /*  9px → 10px  labels, footer  */
+    --text-sm: clamp(0.750rem, 1.8vw, 0.875rem);
+    /* 12px → 14px  sous-titre, boutons */
+    --text-base: clamp(0.875rem, 2.0vw, 1.000rem);
+    /* 14px → 16px  corps de texte  */
+    --text-lg: clamp(1.200rem, 3.0vw, 1.500rem);
+    /* 19px → 24px  montant promo   */
+    --text-xl: clamp(1.400rem, 4.0vw, 1.900rem);
+    /* 22px → 30px  titre hero      */
+}

@@ -2,7 +2,12 @@
 /*                              ANIMATIONS                                  */
 /****************************************************************************/
 
-/* Animation d'apparition du titre hero */
+
+/* ========================================================================
+    1. ANIMATION DE CONTENU — Apparition au chargement
+    Appliquée en cascade sur les sections (hero, promo-card, social)
+    via animation-delay dans style.css pour un effet d'entrée progressif.
+   ======================================================================== */
 
 @keyframes reveal {
     from {
@@ -16,7 +21,52 @@
     }
 }
 
+
+/* ========================================================================
+    ANIMATION DÉCORATIVE — Lévitation de la carte bancaire
+    Boucle infinie sur .promo-card__card.
+   ======================================================================== */
+
+@keyframes floatCard {
+
+    0%,
+    100% {
+        transform: translateY(-52%) rotate(12deg);
+    }
+
+    50% {
+        transform: translateY(-62%) rotate(12deg);
+    }
+}
+
+
+/* ========================================================================
+    2. MICRO-INTERACTION — Pulsation lumineuse du bouton CTA
+    Déclenchée au survol de .hero__button.
+    Attire l'œil sur l'action principale par un halo rythmé.
+   ======================================================================== */
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 12px rgba(138, 101, 181, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 6px 24px rgba(138, 101, 181, 0.55);
+    }
+}
+
+
+/* ========================================================================
+    ACCESSIBILITÉ — Respect des préférences système
+    Désactive toutes les animations pour les utilisateurs sensibles
+    aux mouvements (épilepsie, vertiges, etc.)
+   ======================================================================== */
+
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
