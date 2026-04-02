@@ -1,6 +1,6 @@
 # Aegis Bank - Landing Page Mobile-First
 
-Néobanque éthique et transparente dédiée aux créateurs de contenu, streamers et artistes digitaux.
+Aegis bank est une néobanque éthique et transparente dédiée aux créateurs de contenu, streamers et artistes digitaux.
 
 ## Contexte du projet
 
@@ -8,7 +8,7 @@ Landing page développée dans le cadre d'une mission fictive pour **Namcod**, s
 
 ## Objectifs
 
-- Positionner Aegis Bank comme alternative éthique aux néobanques traditionnelles
+- Positionner Aegis Bank comme alternative éthique et transparente aux néobanques traditionnelles
 - Offrir une expérience zero-scroll optimisée pour mobile
 - Cibler les 18-25 ans (créateurs de contenu, streamers, artistes digitaux)
 - Mettre en avant la transparence, le respect de la vie privée et l'éthique
@@ -26,7 +26,7 @@ Landing page développée dans le cadre d'une mission fictive pour **Namcod**, s
 
 - **Hero section** avec titre dégradé animé
 - **CTA principal** "Téléchargez l'app !" avec effets hover
-- **Card promotionnelle** "20€ offerts - Mars 2026"
+- **Card promotionnelle animée** "20€ offerts - Mars 2026", carte de banque animée
 - **Social links** (Bluesky, Mastodon, Telegram) avec animations
 - **Navigation** avec burger menu et boutons d'authentification
 - **Footer** avec liens légaux
@@ -34,9 +34,9 @@ Landing page développée dans le cadre d'une mission fictive pour **Namcod**, s
 ## Design System
 
 Variables CSS implémentées pour :
-- **Couleurs** : Palette mauve (#8A65B5) cohérente
-- **Typographie** : Arial/Helvetica pour lisibilité optimale
-- **Animations** : Effets hover subtils et professionnels
+- **Couleurs** : Palette mauve (#8A65B5) cohérente, Tech moderne
+- **Typographie** : Titres accrocheurs en 'Syne' pour une identité visuelle présente mais claire, main en 'DM Sans' pour une lisibilité optimale
+- **Animations** : Effets hover subtils et professionnels, carte de banque flotante promotionnelle accrocheuse.
 
 ## Aperçu
 
