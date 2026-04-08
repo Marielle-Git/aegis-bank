@@ -17,9 +17,11 @@
 
     <!-- 
     STYLESHEET
-    Fichier CSS principal du projet
+    Fichiers variables, typos, couleurs, animations, espacements styles
     -->
     <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="typography.css">
+    <link rel="stylesheet" href="spacing.css">
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="style.css">
 
@@ -39,7 +41,7 @@
 
         <div class="navbar">
 
-            <!-- Burger menu (mobile navigation trigger) -->
+            <!-- Burger menu -->
 
             <button type="button" class="navbar__burger" aria-label="Ouvrir le menu de navigation">
 
@@ -52,7 +54,7 @@
             </button>
 
 
-            <!-- Actions utilisateur : login / register -->
+            <!-- Actions utilisateur : S'inscrire / Se connecter -->
 
             <div class="navbar__actions">
 
@@ -78,20 +80,6 @@
 
     <main class="main">
 
-
-        <!-- 
-        HERO SECTION
-        Présentation principale du produit / message marketing
-        BOUTON CALL TO ACTION
-        -->
-
-        <!--
-        Correction : Ma div <hero-cta> servait à justifier l'emplacement de bouton,
-            en passant via display : block; et par margin 0 auto, je peux supprimer 
-            ma balise superflue et alléger mon code.
-
-        -->
-
         <div class="hero">
 
             <h1 class="hero__title">
@@ -103,11 +91,6 @@
                 <p>Honnête, engagée et sans prise de tête</p>
             </div>
 
-            <!---
-            <button class="hero__button">
-                Téléchargez l'app !
-            </button>
-            -->
 
             <button type="button" class="hero__button" aria-label="Téléchargez l'app">
                 <span>Téléchargez l'app !</span>
@@ -122,27 +105,6 @@
         </div>
 
 
-
-        <!-- 
-        PROMO CARD
-        Offre promotionnelle actuelle
-        -->
-
-        <!-- 
-        correction : une card représente un contenu autonome et indépendant,
-        <article> au lieu de <div>.
-        
-        corection : utilisation de <strong> 
-        -->
-        <!--
-        <article class="promo-card">
-            <strong class="promo-card__amount">20€ offerts</strong>
-            <p class="promo-card__date">Mars 2026</p>
-        </article>
-        -->
-
-        <!-- SOCIAL LINKS : Accès aux réseaux sociaux du projet -->
-
         <article class="promo-card">
             <h2 class="promo-card__label">Offre de lancement</h2>
             <strong class="promo-card__amount">20€ offerts</strong>
@@ -156,6 +118,9 @@
                 </div>
             </div>
         </article>
+
+
+        <!-- SOCIAL LINKS : Accès aux réseaux sociaux du projet -->
 
 
         <div class="social">

@@ -5,8 +5,7 @@
 
 /* ========================================================================
     1. ANIMATION DE CONTENU — Apparition au chargement
-    Appliquée en cascade sur les sections (hero, promo-card, social)
-    via animation-delay dans style.css pour un effet d'entrée progressif.
+    Appliquée en cascade sur les sections (hero, promo-card ett social)
    ======================================================================== */
 
 @keyframes reveal {
@@ -43,7 +42,6 @@
 /* ========================================================================
     2. MICRO-INTERACTION — Pulsation lumineuse du bouton CTA
     Déclenchée au survol de .hero__button.
-    Attire l'œil sur l'action principale par un halo rythmé.
    ======================================================================== */
 
 @keyframes pulseGlow {
@@ -61,8 +59,6 @@
 
 /* ========================================================================
     ACCESSIBILITÉ — Respect des préférences système
-    Désactive toutes les animations pour les utilisateurs sensibles
-    aux mouvements (épilepsie, vertiges, etc.)
    ======================================================================== */
 
 @media (prefers-reduced-motion: reduce) {

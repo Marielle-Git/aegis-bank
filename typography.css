@@ -30,6 +30,6 @@
     /* 14px → 16px  corps de texte  */
     --text-lg: clamp(1.200rem, 3.0vw, 1.500rem);
     /* 19px → 24px  montant promo   */
-    --text-xl: clamp(1.400rem, 4.0vw, 1.900rem);
-    /* 22px → 30px  titre hero      */
+    --text-2xl: clamp(1.800rem, 5.5vw, 2.200rem);
+    /* 29px → 35px  titre hero principal */
 }

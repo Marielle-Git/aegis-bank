@@ -1,0 +1,22 @@
+/****************************************************************************/
+/*                        VARIABLES — ESPACEMENT                            */
+/****************************************************************************/
+
+:root {
+
+    /* ----- Espacements horizontaux fluides (vw) ----- */
+    --spacing-sm: clamp(0.5rem, 2vw, 0.75rem);
+    --spacing-md: clamp(0.75rem, 2.5vw, 1.25rem);
+    --spacing-lg: clamp(1rem, 3vw, 1.5rem);
+
+    /* -----------------------------------------------------------------------
+    Espacements verticaux fluides — basés sur vh
+    ----------------------------------------------------------------------- */
+
+    --spacing-v-sm: clamp(0.75rem, 3vh, 1.5rem);
+    /* ~20px  sur 667px (iPhone SE) */
+    --spacing-v-lg: clamp(1.5rem, 8vh, 4rem);
+    /* ~53px  sur 667px             */
+    --spacing-v-xl: clamp(2rem, 10vh, 5rem);
+    /* ~67px  sur 667px             */
+}
